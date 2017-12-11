@@ -113,9 +113,7 @@ def data_analysis(data):
     # 绘制直方图
     # 点击量
     click_hist = npy.arange(click_min, click_max, click_dist)
-    click_count_list = []
-    for i in click_counts: click_count_list.append(int(i))
-    pylab.hist(click_count_list, click_hist)
+    pylab.hist(click_counts.astype(int), click_hist)
     pylab.xlabel("点击量")
     pylab.ylabel("博文数")
     # pylab.hist(click_count, 10)
@@ -123,9 +121,7 @@ def data_analysis(data):
 
     # 评论数
     comment_hist = npy.arange(comment_min, comment_max, comment_dist)
-    comment_count_list = []
-    for i in comment_counts: comment_count_list.append(int(i))
-    pylab.hist(comment_count_list, comment_hist)
+    pylab.hist(comment_counts.astype(int), comment_hist)
     pylab.xlabel("评论数")
     pylab.ylabel("博文数")
     # pylab.hist(comment_count_list, 10)
