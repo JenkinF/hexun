@@ -42,7 +42,7 @@ def missing_value_handle(data):
 '''
 
 
-def get_world_cloud(data):
+def get_word_cloud(data):
     name = ""
     for i in data["article_name"]:
         arr = jieba.cut(i)
@@ -132,7 +132,7 @@ def data_analysis(data):
 
 if __name__ == '__main__':
     data = get_data()
-    get_world_cloud(data)
+    get_word_cloud(data)
     print(data.describe())
     data = missing_value_handle(data)
     data = abnormal_value_handle(data)
